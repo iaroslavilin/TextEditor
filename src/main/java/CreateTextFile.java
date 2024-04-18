@@ -11,19 +11,9 @@ public class CreateTextFile {
 
         try (PrintWriter out = new PrintWriter(fileName)) {
             out.println(textInput);
-            System.out.println(language.equalsIgnoreCase("Russian") ? "Текст сохранен" : "Text is save");
+            System.out.println(language.equalsIgnoreCase("Russian") ? "Текст сохранен" : "Text saved");
         } catch (FileNotFoundException e) {
             System.err.println(language.equalsIgnoreCase("Russian") ? "Файл не найден: " + e.getMessage() : "File not found: " + e.getMessage());
-        }
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            System.out.println(language.equalsIgnoreCase("Russian") ? "Содержимое файла " + fileName + ":" : "File contents " + fileName + ":");
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.err.println(language.equalsIgnoreCase("Russian") ? "Ошибка чтения файла: " + e.getMessage() : "Error reading file: " + e.getMessage());
         }
     }
 }

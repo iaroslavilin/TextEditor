@@ -10,8 +10,14 @@ public class Main {
             case 1:
                 CreateTextFile.createTextFile(scanner, language);
                 break;
+            case 2:
+                DeleteTextFile.deleteTextFile(scanner, language);
+                break;
+            case 3:
+                ReadTextFile.readTextFile(scanner, language);
+                break;
             default:
-                System.out.println("Invalid choice");
+                System.out.println(language.equalsIgnoreCase("Russian") ? "Неверный выбор" : "Invalid choice");
         }
     }
 }
