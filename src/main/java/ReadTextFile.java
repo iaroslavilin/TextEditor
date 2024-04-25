@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ReadTextFile {
     public static void readTextFile(Scanner scanner, String language) {
         System.out.println(language.equalsIgnoreCase("Russian") ? "Введите название файла:" : "Enter file name:");
-        String fileName = "src/doc/" + scanner.nextLine();
+        String fileName = "src/main/java/" + scanner.nextLine();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             System.out.println(language.equalsIgnoreCase("Russian") ? "Содержимое файла:" : "File contents:");

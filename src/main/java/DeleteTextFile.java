@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class DeleteTextFile {
     public static void deleteTextFile(Scanner scanner, String language) {
         System.out.println(language.equalsIgnoreCase("Russian") ? "Введите название файла:" : "Enter file name:");
-        String fileName = "src/doc/" + scanner.nextLine();
+        String fileName = "src/main/java/" + scanner.nextLine();
 
         File file = new File(fileName);
         if (file.delete()) {

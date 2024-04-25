@@ -16,6 +16,9 @@ public class Main {
             case 3:
                 ReadTextFile.readTextFile(scanner, language);
                 break;
+            case 4:
+                EditTextFile.editTextFile(scanner, language);
+                break;
             default:
                 System.out.println(language.equalsIgnoreCase("Russian") ? "Неверный выбор" : "Invalid choice");
         }

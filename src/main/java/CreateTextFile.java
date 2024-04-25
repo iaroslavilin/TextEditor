@@ -5,13 +5,7 @@ public class CreateTextFile {
     public static void createTextFile(Scanner scanner, String language) {
         System.out.println(language.equalsIgnoreCase("Russian") ? "Введите название файла:" : "Enter file name:");
         String fileName = scanner.nextLine();
-
-        if (!fileName.endsWith(".txt")) {
-            System.out.println(language.equalsIgnoreCase("Russian") ? "Файл должен иметь расширение .txt" : "File must have .txt extension");
-            return;
-        }
-
-        fileName = "src/doc/" + fileName;
+        fileName = "src/main/java/" + fileName;
 
         System.out.println(language.equalsIgnoreCase("Russian") ? "Введите текст (введите saveText для сохранения):" : "Enter text (type saveText to save):");
         StringBuilder content = new StringBuilder();
